@@ -49,17 +49,19 @@
 * 「jbdevstudio.bat」をダブルクリックし「Developer Studio」を起動する。
 * 「Developer Studio」の「Forge Console」タブで緑色の矢印を押す。
 * コンソール画面で下記のコマンドを実行する。
- * Create a new project
+
+#### コマンド実行例
+* Create a new project
 ```
 $ project-new --named conference --topLevelPackage com.example.project --projectFolder /directory/path --finalName conferenceApp
 ```
- * Setup your JPA Provider
-  * デフォルトのデータソースを使用しJBoss内蔵のインメモリDB(H2)へアクセスするため、jpa-setupは実行しない。
-  * デフォルト以外のデータソースを使用する場合は、下記の例を参考にすること。
+* Setup your JPA Provider
+ * デフォルトのデータソースを使用しJBoss内蔵のインメモリDB(H2)へアクセスするため、jpa-setupは実行しない。
+ * デフォルト以外のデータソースを使用する場合は、下記の例を参考にすること。
 ```
 $ jpa-setup --provider Eclipse Link --dbType POSTGRES --dataSourceName java:comp/DefaultDataSource
 ```
- * Create a JPA entity with Bean Validation constraints
+* Create a JPA entity with Bean Validation constraints
 ```
 $ jpa-new-entity --named Speaker
 $ jpa-new-field --named firstname
@@ -70,7 +72,7 @@ $ constraint-add --onProperty firstname --constraint NotNull
 $ constraint-add --onProperty surname --constraint NotNull
 $ constraint-add --onProperty bio --constraint Size --max 2000
 ```
- * Create another JPA entity with a One-to-Many relationship
+* Create another JPA entity with a One-to-Many relationship
 ```
 $ jpa-new-entity --named Talk
 $ jpa-new-field --named title
@@ -82,13 +84,13 @@ $ constraint-add --onProperty title --constraint NotNull
 $ constraint-add --onProperty room --constraint NotNull
 $ constraint-add --onProperty description --constraint Size --max 2000
 ```
- * Create a simple Java enum
+* Create a simple Java enum
 ```
 $ java-new-enum --named Language --targetPackage com.example.project.model
 $ java-new-enum-const ENGLISH
 $ java-new-enum-const FRENCH
 ```
- * Create another JPA entity with an enumerated type
+* Create another JPA entity with an enumerated type
 ```
 $ jpa-new-entity --named Book
 $ jpa-new-field --named isbn
@@ -100,15 +102,15 @@ $ jpa-new-field --named nbOfPages --type java.lang.Integer
 $ jpa-new-field --named publicationDate --typeName java.util.Date --temporalType DATE
 $ jpa-new-field --named language --type com.example.project.model.Language
 ```
- * Set up scaffolding
+* Set up scaffolding
 ```
 $ faces-setup --facesVersion 2.2
 ```
- * Generate scaffolding for all the entities
+* Generate scaffolding for all the entities
 ```
 $ scaffold-generate --targets com.example.project.model.*
 ```
- * build
+* build
 ```
 $ build
 ```
