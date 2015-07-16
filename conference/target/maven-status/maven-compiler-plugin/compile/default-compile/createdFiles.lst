@@ -1,0 +1,5 @@
+com\example\project\model\Talk.class
+com\example\project\model\Book.class
+com\example\project\model\Speaker.class
+com\example\project\rest\RestApplication.class
+com\example\project\model\Language.class
