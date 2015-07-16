@@ -167,8 +167,8 @@ jboss.serverManagement.controller.management.http: Address already in use: bind 
 
 ## JBossの管理コンソールからアプリケーションをデプロイ
 * ブラウザから下記のURLにアクセスし、JBossの管理コンソールにログインする。
-* http://localhost:9990
- * 管理ユーザでログインする。
+ * http://localhost:9990
+* 管理ユーザでログインする。
  * 「Deplpy an applicaion」から「Create Deployment」を選択する。
  * 「Add」ボタンを選択し、ビルドしたwarファイルを選択し、「Next」ボタンを選択する。
   * D:\jbdevstudio\workspace\conference\target\conferenceApp.war
