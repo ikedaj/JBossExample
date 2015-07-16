@@ -35,7 +35,7 @@
 > java -jar jboss-devstudio-9.0.0.Beta1-installer-eap.jar
 ```
 
-## Apache Mavenのインストール
+### Apache Mavenのインストール
 * Apache Maven(apache-maven-3.3.3-bin.zip)をダウンロードする。
  * https://maven.apache.org/download.cgi
  * 2015/07/15時点の最新版は3.3.3
@@ -45,7 +45,7 @@
 * 参考サイト
  * http://forge.jboss.org/document/write-a-java-ee-web-application---advanced
 
-## Forge Consoleでのコマンド実行例
+### Forge Consoleでのコマンド実行例
 * 「jbdevstudio.bat」をダブルクリックし「Developer Studio」を起動する。
 * 「Developer Studio」の「Forge Console」タブで緑色の矢印を押す。
 * コンソール画面で下記のコマンドを実行する。
@@ -54,7 +54,7 @@
 $ project-new --named conference --topLevelPackage com.example.project --projectFolder /directory/path --finalName conferenceApp
 ```
  * Setup your JPA Provider
-  * デフォルトのデータソースを使用しJBoss内蔵のインメモリDB(H2)を使用するため、jpa-setupは実行しない。
+  * デフォルトのデータソースを使用しJBoss内蔵のインメモリDB(H2)へアクセスするため、jpa-setupは実行しない。
   * デフォルト以外のデータソースを使用する場合は、下記の例を参考にすること。
 ```
 $ jpa-setup --provider Eclipse Link --dbType POSTGRES --dataSourceName java:comp/DefaultDataSource
