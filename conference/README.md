@@ -1,5 +1,9 @@
 # JBoss Forge による Scaffold 作成デモ
 
+* 2015年7月10日(金)に行われた「インフラ技術者向けJBoss入門」の冒頭で実施したデモを再現
+ * http://d-cube.connpass.com/event/17377/
+ * http://slides.com/kuniim/deck#/
+
 * 本手順書の実行環境
  * Windows 8.1(64bit)
  * メモリ 16GB
