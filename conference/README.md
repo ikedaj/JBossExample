@@ -44,6 +44,8 @@
  * https://maven.apache.org/download.cgi
  * 2015/07/15時点の最新版は3.3.3
  * zipファイルを展開して「C:\Program Files (x86)\apache-maven-3.3.3」に配置する。
+ * プロキシ環境で作業する場合は下記URLを参照して、プロキシサーバやポート番号などを設定する。
+  * https://maven.apache.org/guides/mini/guide-proxies.html
 
 ## Forgeを使用したScaffoldの作成
 * 参考サイト
