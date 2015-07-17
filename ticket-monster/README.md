@@ -218,7 +218,7 @@ Is this correct yes/no? yes
  * Event.javaとかevent-detail.htmlを眺めてみて、画像の取得に失敗しているような気配を感じる。
  * import.sqlを眺めてみて、画像をインターネット(dropboxとかwikimediaとか)から取得していることに愕然とする。
  * プロキシ環境の場合、外部からの画像取得は困難なのでローカルの画像に置換する。
-  * 
+  * https://github.com/ikedaj/JBossExample/blob/master/ticket-monster/demo/src/main/resources/import.sql
 
 * アプリケーションのビルドとデプロイ
 
