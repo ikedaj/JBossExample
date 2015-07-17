@@ -59,7 +59,7 @@
 #### コマンド実行例
 * Create a new project
 ```
-$ project-new --named conference --topLevelPackage com.example.project --projectFolder /directory/path --finalName conferenceApp
+$ project-new --named conference --topLevelPackage com.example.project --finalName conferenceApp
 ```
 * Setup your JPA Provider
  * デフォルトのデータソースを使用しJBoss内蔵のインメモリDB(H2)へアクセスするため、jpa-setupは実行しない。
