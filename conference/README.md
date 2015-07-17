@@ -62,7 +62,10 @@
 $ project-new --named conference --topLevelPackage com.example.project --finalName conferenceApp
 ```
 * Setup your JPA Provider
- * デフォルトのデータソースを使用しJBoss内蔵のインメモリDB(H2)へアクセスするため、jpa-setupは実行しない。
+ * デフォルトのデータソースを使用しJBoss内蔵のインメモリDB(H2)へアクセスする場合は、引数なしで jpa-setup を実行する。
+```
+$ jpa-setup
+```
  * デフォルト以外のデータソースを使用する場合は、下記の例を参考にすること。
 ```
 $ jpa-setup --provider Eclipse Link --dbType POSTGRES --dataSourceName java:comp/DefaultDataSource
