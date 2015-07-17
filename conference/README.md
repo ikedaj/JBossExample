@@ -62,12 +62,12 @@
 $ project-new --named conference --topLevelPackage com.example.project --finalName conferenceApp
 ```
 * Setup your JPA Provider
- * デフォルトのデータソースを使用しJBoss内蔵のインメモリDB(H2)へアクセスする場合は、引数なしで jpa-setup を実行する。
-```
+    * デフォルトのデータソースを使用しJBoss内蔵のインメモリDB(H2)へアクセスする場合は、引数なしで jpa-setup を実行する。
+ ```
 $ jpa-setup
 ```
- * デフォルト以外のデータソースを使用する場合は、下記の例を参考にすること。
-```
+    * デフォルト以外のデータソースを使用する場合は、下記の例を参考にすること。
+ ```
 $ jpa-setup --provider Eclipse Link --dbType POSTGRES --dataSourceName java:comp/DefaultDataSource
 ```
 * Create a JPA entity with Bean Validation constraints
@@ -172,7 +172,7 @@ jboss.serverManagement.controller.management.http: Address already in use: bind 
 
 ## JBossの起動確認
 * ブラウザから下記のURLにアクセスし、JBossが起動していることを確認する。
- * http://localhost:8080/
+ * http://localhost:8080
 
 ## JBossの管理コンソールからアプリケーションをデプロイ
 * ブラウザから下記のURLにアクセスし、JBossの管理コンソールにログインする。
@@ -180,7 +180,7 @@ jboss.serverManagement.controller.management.http: Address already in use: bind 
 * 管理ユーザでログインする。
  * 「Deplpy an applicaion」から「Create Deployment」を選択する。
  * 「Add」ボタンを選択し、ビルドしたwarファイルを選択し、「Next」ボタンを選択する。
-  * D:\jbdevstudio\workspace\conference\target\conferenceApp.war
+   * D:\jbdevstudio\workspace\conference\target\conferenceApp.war
  * 「Enable」にチェックして「Save」ボタンを選択する。
 
 ## デプロイしたアプリケーションにアクセス
