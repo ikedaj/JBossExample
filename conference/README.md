@@ -202,3 +202,8 @@ jboss.serverManagement.controller.management.http: Address already in use: bind 
  * 方法2) 使用するポート番号を変更する。
   * standalone.xmlの当該ポート番号を変更する。
   * standalone.xmlのjboss.socket.binding.port-offsetを変更して、ポート番号をずらす。
+
+## 「Developer Studio」からアプリケーションをデプロイする方法
+* 「Servers」タブで「JBoss EAP 6.4」を選択し右クリックしする。
+* 「Add and Remove」を選択し、「Available」から「conference」を選択し、「Add」ボタンでサーバに追加する。
+ * 選択するのはプロジェクト名のため、接続先は、http://localhost:8080/conference となる。
