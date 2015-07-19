@@ -114,7 +114,7 @@ $ jpa-new-field --named language --type com.example.project.model.Language
 ```
 * Move to the project top
 ```
-$ cd D:\jbdevstudio\workspace\conference
+$ cd ../../../../../../../..
 ```
 * Set up scaffolding
 ```
