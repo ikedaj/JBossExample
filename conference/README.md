@@ -165,16 +165,6 @@ D:\jbdevstudio\runtimes\jboss-eap\bin> add-user.bat
 * 「Developer Studio」の「Servers」タブを選択する。
 * 「JBoss EAP 6.4」を右クリックし、「Start」を選択する。
 
-* 「Developer Studio」の「Console」にERRORが出力される例
- * 管理コンソール用のポート9990が既に使用されている
-```
-00:21:05,905 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-8) MSC000001: 
-Failed to start service jboss.serverManagement.controller.management.http: org.jboss.msc.service.StartException in service 
-jboss.serverManagement.controller.management.http: Address already in use: bind localhost/127.0.0.1:9990
-```
- * TCPViewをダウンロードし、9990ポートを使用しているプロセスを停止する。
-  * https://technet.microsoft.com/ja-jp/sysinternals/bb897437.aspx
-
 ## JBossの起動確認
 * ブラウザから下記のURLにアクセスし、JBossが起動していることを確認する。
  * http://localhost:8080
@@ -199,3 +189,16 @@ jboss.serverManagement.controller.management.http: Address already in use: bind 
 * 「Developer Studio」の「Servers」タブを選択する。
 *  赤いボタン(Terminate)を選択し、JBossを停止する。
 
+## ポート番号が重複している場合の対処法
+* 管理コンソール用のポート9990が既に使用されている場合、「Developer Studio」の「Console」にERRORが出力される
+```
+00:21:05,905 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-8) MSC000001: 
+Failed to start service jboss.serverManagement.controller.management.http: org.jboss.msc.service.StartException in service 
+jboss.serverManagement.controller.management.http: Address already in use: bind localhost/127.0.0.1:9990
+```
+ * 方法1) ポートを使用しているサービスを停止する。
+  * TCPViewをダウンロードし、9990ポートを使用しているプロセスを停止する。
+ 　 * https://technet.microsoft.com/ja-jp/sysinternals/bb897437.aspx
+ * 方法2) 使用するポート番号を変更する。
+  * standalone.xmlの当該ポート番号を変更する。
+  * standalone.xmlのjboss.socket.binding.port-offsetを変更して、ポート番号をずらす。
