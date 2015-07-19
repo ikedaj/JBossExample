@@ -482,7 +482,7 @@ exit
 * デフォルトの設定では、インスタンスの停止時にテーブルを削除する設定のため、テーブルを維持する設定へ変更する。
 
 ```
-# # cd /tmp/ticket-monster/demo/src/main/resources-postgresql/META-INF
+# cd /tmp/ticket-monster/demo/src/main/resources-postgresql/META-INF
 # cp -p persistence.xml persistence.xml.org
 # vim persistence.xml
 # diff -urNp persistence.xml.org persistence.xml
@@ -512,10 +512,9 @@ exit
 
 ```
 # docker pull jboss/wildfly:8.2.0.Final
+```
 
 * コンテナに取り込むファイルを収集する。
-
-```
 
 ```
 # mkdir /tmp/jboss
@@ -526,8 +525,8 @@ exit
 # cp -p /opt/jboss/wildfly-8.2.0.Final/bin/standalone.conf .
 # cp -p /tmp/ticket-monster/demo/src/main/webapp/admin/img/forge-logo.png .
 ```
-* Dockerfileを作成する。
 
+* Dockerfileを作成する。
 
 ```
 # vim Dockerfile
@@ -541,8 +540,8 @@ ADD standalone.xml /opt/jboss/wildfly/standalone/configuration/
 ADD forge-logo.png /tmp/ticket-monster/demo/src/main/webapp/admin/img/
 RUN /opt/jboss/wildfly/bin/add-user.sh admin adminp@ssw0rd --silent
 ```
-* イメージをビルドする。
 
+* イメージをビルドする。
 
 ```
 # docker build --force-rm=true --rm=true --tag=local/ticket-monster .
