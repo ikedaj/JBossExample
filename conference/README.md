@@ -112,6 +112,10 @@ $ jpa-new-field --named nbOfPages --type java.lang.Integer
 $ jpa-new-field --named publicationDate --typeName java.util.Date --temporalType DATE
 $ jpa-new-field --named language --type com.example.project.model.Language
 ```
+* Move to the project top
+```
+$ cd D:\jbdevstudio\workspace\conference
+```
 * Set up scaffolding
 ```
 $ faces-setup --facesVersion 2.2
